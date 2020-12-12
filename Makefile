@@ -6,6 +6,8 @@ DOC := doc
 SRC := src
 BIN := bin
 
+.PHONY: all build clean install uninstall
+
 all: build
 
 build:
@@ -36,5 +38,3 @@ uninstall:
 	@echo "Uninstalling man page..."
 	rm -f "${MANPREFIX}/man1/${MAN}"
 	@echo "Done"
-
-.PHONY: all build clean install uninstall
