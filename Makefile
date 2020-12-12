@@ -1,10 +1,10 @@
 include config.mk
 
-OUT = hello
-MAN = ${OUT}.1
-DOC = doc
-SRC = src
-BIN = bin
+OUT := hello
+MAN := ${OUT}.1
+DOC := doc
+SRC := src
+BIN := bin
 
 all: build
 
