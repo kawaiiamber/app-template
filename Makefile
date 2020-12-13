@@ -13,7 +13,7 @@ all: build
 build:
 	@echo "Building project..."
 	mkdir -p ${BIN}
-	${CC} -o "${BIN}/${OUT}" "${SRC}/main.c"
+	${CC} ${CCFLAGS} -o "${BIN}/${OUT}" "${SRC}/main.c"
 	@echo "Done"
 
 clean:
