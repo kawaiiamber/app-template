@@ -1,6 +1,6 @@
 # Set C compiler here e.g. tcc, cc, clang, etc
 CC      := tcc
-CCFLAGS := -g -Wall -std=c99
+CCFLAGS := -g -Wall -pedantic -std=c99
 
 # Set installation paths
 PREFIX    ?= /usr/local
