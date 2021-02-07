@@ -3,6 +3,6 @@ CC      := tcc
 CCFLAGS := -g -Wall -pedantic -std=c99
 
 # Set installation paths
-PREFIX    ?= $(DESTDIR)/usr/local
-BINPREFIX ?= $(PREFIX)/bin
-MANPREFIX ?= $(PREFIX)/share/man/man1
+PREFIX    ?= ${DESTDIR}/usr/local
+BINPREFIX ?= ${PREFIX}/bin
+MANPREFIX ?= ${PREFIX}/share/man/man1
