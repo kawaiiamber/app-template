@@ -7,7 +7,7 @@ SRC := src
 BIN := bin
 
 # For non-GNU make
-SHELL ?= /bin/sh
+SHELL := /bin/sh
 
 all: build
 
