@@ -1,41 +1,30 @@
 include config.mk
 
-OUT := hello
-MAN := ${OUT}.1
-DOC := doc
-SRC := src
-BIN := bin
-
-# For non-GNU make
+# Mainly for non-GNU Make
 SHELL := /bin/sh
+
+PROG := hello
+
+CCFLAGS := -g -Wall -Wextra
+OUT     := -o bin/${PROG} src/main.c
 
 all: build
 
 build:
-	@echo "Building project..."
-	mkdir -p ${BIN}
-	${CC} ${CCFLAGS} -o ${BIN}/${OUT} ${SRC}/main.c
-	@echo "Done"
+	mkdir -p bin
+	${CC} ${CCFLAGS} ${OUT}
 
 clean:
-	@echo "Cleaning source directory..."
-	rm -rf ${BIN}
-	@echo "Done"
+	rm -rf bin
 
 install:
-	@echo "Installing binary..."
 	mkdir -p ${BINPREFIX}
-	cp -p ${BIN}/${OUT} ${BINPREFIX}
-	@echo "Installing man page..."
+	cp -p bin/${PROG} ${BINPREFIX}
 	mkdir -p ${MANPREFIX}
-	cp -p ${DOC}/${MAN} ${MANPREFIX}
-	@echo "Done"
+	cp -p doc/${PROG}.1 ${MANPREFIX}
 
 uninstall:
-	@echo "Uninstalling binary..."
-	rm -f ${BINPREFIX}/${OUT}
-	@echo "Uninstalling man page..."
-	rm -f ${MANPREFIX}/${MAN}
-	@echo "Done"
+	rm -f ${BINPREFIX}/${PROG}
+	rm -f ${MANPREFIX}/${PROG}.1
 
 .PHONY: all build clean install uninstall
