@@ -1,1 +1,2 @@
-static const char userString[] = "Hello world"; /* Edit userString to your custom message */
+static const char userString[] = "Hello world"; /* Edit userString to your
+						   custom message */
