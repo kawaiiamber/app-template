@@ -5,7 +5,7 @@ SHELL := /bin/sh
 
 PROG := hello
 
-CCFLAGS := -g -Wall -Wextra
+CCFLAGS := -g -Wall -Wextra -Wpedantic
 OUT     := -o bin/${PROG} src/main.c
 
 all: build
