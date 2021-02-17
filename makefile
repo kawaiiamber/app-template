@@ -1,6 +1,6 @@
 include config.mk
 
-# Mainly for non-GNU Make
+# Mainly for non-GNU make
 SHELL := /bin/sh
 
 PROG := hello
