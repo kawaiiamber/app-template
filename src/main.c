@@ -10,6 +10,5 @@ int
 main(void)
 {
 	printf("%s\n", userString);
-
 	return 0;
 }
